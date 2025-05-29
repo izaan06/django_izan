@@ -1,6 +1,8 @@
 name: Django CI
 
 on:
+  schedule:
+    - cron: '*/5 * * * *'  # Cada 5 minutos (UTC)
   push:
     branches: [main]
   pull_request:
@@ -9,15 +11,21 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.11'
+
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Migrate
+
+      - name: Run migrations
         run: python manage.py migrate
+
       - name: Run tests
         run: python manage.py test
