@@ -1,19 +1,19 @@
-# Supermercado Django Project
+# Projecte Supermercat Django
 
-## Introducción
-Proyecto de gestión de supermercado con Django.
+## Introducció
+Projecte de gestió de supermercat amb Django.
 
-## Instalación
-1. Clonar el repositorio.
-2. Instalar dependencias: `pip install -r requirements.txt`.
-3. Ejecutar migraciones: `python manage.py migrate`.
+## Instal·lació
+1. Clonar el repositori.
+2. Instal·lar les dependències: `pip install -r requirements.txt`.
+3. Executar les migracions: `python manage.py migrate`.
 
-## Ejecución
+## Execució
 `python manage.py runserver`  
-Visitar http://127.0.0.1:8000/ para acceder.
+Visitar http://127.0.0.1:8000/ per accedir-hi.
 
 ## Tests
 `python manage.py test`
 
 ## GitHub Actions
-Archivo de CI en `.github/workflows/django-tests.yml`.
+Arxiu de CI a `.github/workflows/django-tests.yml`.
