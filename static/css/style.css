@@ -32,7 +32,6 @@ header nav a:hover {
     border-radius: 5px;
 }
 
-/* Contenido principal */
 main.container {
     width: 90%;
     max-width: 1000px;
@@ -89,9 +88,9 @@ footer {
 }
 
 .header-image img {
-    height: 350px;    /* alçada fixa */
-    width: 100%;      /* s’estira al 100% d’ample */
-    object-fit: fill; /* força que la imatge s’estiri per omplir l’espai */
+    height: 350px;    
+    width: 100%;      
+    object-fit: fill; 
     display: block;
     margin-bottom: 20px;
     margin-top: 0px;
@@ -129,16 +128,16 @@ footer {
 
 .tots-productes .row {
     display: flex;
-    flex-wrap: wrap;       /* Permite que los elementos "bajen" a la siguiente línea */
+    flex-wrap: wrap;       
     gap: 20px;
 }
 
 .tots-productes .col {
-    flex: 0 0 calc(20% - 16px); /* Cada columna ocupa 20% del ancho menos gap (ajustar para 5 en línea) */
+    flex: 0 0 calc(20% - 16px); 
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
-    box-sizing: border-box; /* Para que el padding y border no aumenten el ancho total */
+    box-sizing: border-box; 
 }
 
 .tots-productes .col img {
