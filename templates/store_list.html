@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}   
+
+{% block content %}
+<h1>Botigues</h1>
+<div class="row">
+    {% for store in stores %}
+    <div class="col">
+        <a href="{% url 'stores-detail' store.slug %}">
+            {% if store.image %}
+                <img src="{{ store.image.url }}" alt="{{ store.name }}">
+            {% else %}
+                {% with store.name|lower as name %}
+                    {% if name == "carrefour" %}
+                        <img src="{% static 'images/carrefour.jpg' %}" alt="Carrefour">
+                    {% elif name == "apple" %}
+                        <img src="{% static 'images/apple.jpg' %}" alt="Apple">
+                    {% elif name == "nike" %}
+                        <img src="{% static 'images/nike.jpg' %}" alt="Nike">
+                    {% elif name == "condis" %}
+                        <img src="{% static 'images/condis.jpg' %}" alt="Condis">
+                    {% elif name == "spar" %}
+                        <img src="{% static 'images/spar.jpg' %}" alt="Spar">
+                    {% elif name == "sobrerroca" %}
+                        <img src="{% static 'images/sobrerroca.jpg' %}" alt="Sobrerroca">
+                    {% else %}
+                        <img src="{% static 'images/no-image.png' %}" alt="Sense imatge">
+                    {% endif %}
+                {% endwith %}
+            {% endif %}
+            <br>
+            {{ store.name }}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+[
+  {"model": "supermercado.store", "pk": 1, "fields": {"name": "Sucursal A", "slug": "sucursal-a", "address": "Calle Falsa 123"}},
+  {"model": "supermercado.category", "pk": 1, "fields": {"name": "Panadería", "slug": "panaderia"}},
+  {"model": "supermercado.category", "pk": 2, "fields": {"name": "Frutas", "slug": "frutas"}},
+  {"model": "supermercado.product", "pk": 1, "fields": {"name": "Pan", "slug": "pan", "description": "Pan fresco", "price": "1.20", "stock": 50, "created_at": "2025-05-01T10:00:00Z"}},
+  {"model": "supermercado.product", "pk": 2, "fields": {"name": "Manzana", "slug": "manzana", "description": "Manza roja", "price": "0.80", "stock": 100, "created_at": "2025-05-02T11:00:00Z"}}
+]

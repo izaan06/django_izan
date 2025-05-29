@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Hipermercat</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="{% url 'index' %}">Inici</a>
+                <a href="{% url 'products-list' %}">Productes</a>
+                <a href="{% url 'stores-list' %}">Botigues</a>
+                <a href="{% url 'categories-list' %}">Categories</a>
+            </div>
+        </nav>
+    </header>
+
+    {% block banner %}{% endblock %}
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Copyright: Bloc de Django-M3-UF6</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ product.name }}</h1>
+<p>{{ product.description }}</p>
+<p>Preu: {{ product.price }}€</p>
+<p>Stock: {{ product.stock }}</p>
+
+<p>Botigues:
+  {% for store in product.stores.all %}
+    <a href="{% url 'stores-detail' store.slug %}">{{ store.name }}</a>{% if not forloop.last %}, {% endif %}
+  {% empty %}
+    No assignades
+  {% endfor %}
+</p>
+
+<p>Categoríes:
+  {% for category in product.categories.all %}
+    <a href="{% url 'category-products' category.slug %}">{{ category.name }}</a>{% if not forloop.last %}, {% endif %}
+  {% empty %}
+    No assignades
+  {% endfor %}
+</p>
+
+{% if product.image %}
+<img src="{{ product.image.url }}" alt="{{ product.name }}">
+{% endif %}
+{% endblock %}

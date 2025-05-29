@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>{{ store.name }}</h1>
+<p>{{ store.address }}</p>
+
+<h2>Productes</h2>
+<div class="row">
+    {% for product in store.products.all %}
+    <div class="col">
+        <a href="{% url 'products-detail' product.slug %}">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% else %}
+                <img src="{% static 'images/no-image.png' %}" alt="Sense imatge">
+            {% endif %}
+            <br>
+            {{ product.name }}
+        </a>
+    </div>
+    {% empty %}
+    <p>Aquesta botiga no té productes.</p>
+    {% endfor %}
+</div>
+{% endblock %}

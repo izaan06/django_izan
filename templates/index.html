@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block banner %}
+<div class="header-image">
+    <img src="{% static 'images/hipermercado.jpg' %}" alt="Hipermercat">
+</div>
+{% endblock %}
+
+{% block content %}
+<h1>Productes Destacats</h1>
+
+<div class="row">
+    {% for product in products %}
+    <div class="col">
+        <a href="{% url 'products-detail' product.slug %}">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width: 100%; height: auto;">
+            <br>
+            {{ product.name }} - {{ product.price }}€
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

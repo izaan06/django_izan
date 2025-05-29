@@ -1,0 +1,148 @@
+/* Estilo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header nav {
+    background-color: #2c3e50;
+    padding: 1em 0;
+}
+
+header nav .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em;
+    transition: background 0.3s;
+}
+
+header nav a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+/* Contenido principal */
+main.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2em auto;
+    background-color: white;
+    padding: 2em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1em;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    background-color: #ecf0f1;
+    margin-top: 2em;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-image img {
+    height: 350px;    /* alçada fixa */
+    width: 100%;      /* s’estira al 100% d’ample */
+    object-fit: fill; /* força que la imatge s’estiri per omplir l’espai */
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.product-item img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.product-info a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.product-info {
+    font-size: 16px;
+}
+
+.tots-productes .row {
+    display: flex;
+    flex-wrap: wrap;       /* Permite que los elementos "bajen" a la siguiente línea */
+    gap: 20px;
+}
+
+.tots-productes .col {
+    flex: 0 0 calc(20% - 16px); /* Cada columna ocupa 20% del ancho menos gap (ajustar para 5 en línea) */
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box; /* Para que el padding y border no aumenten el ancho total */
+}
+
+.tots-productes .col img {
+    max-height: 150px;
+    width: auto;
+    object-fit: contain;
+}

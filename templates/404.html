@@ -1,0 +1,9 @@
+<!-- templates/404.html -->
+{% extends 'base.html' %}
+{% block content %}
+  <div style="text-align: center; padding: 50px;">
+    <h1>Error 404 - Pàgina no trobada</h1>
+    <p>La pàgina que busques no existeix.</p>
+    <a href="{% url 'index' %}">Tornar a l'inici</a>
+  </div>
+{% endblock %}
